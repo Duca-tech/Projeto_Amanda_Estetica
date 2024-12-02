@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.borda {
+    border: 1px solid red;
+}
+
+.containerTecnicas {
+    text-align: center;
+
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #FF1493;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+
+}
+
+h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF91BC;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: expandirContrair 2s infinite;
+}
+
+@keyframes expandirContrair {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Estado normal */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Expandir para 1.2 vezes o tamanho */
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Inicialmente fora da tela à esquerda */
+    width: 300px;
+    /* Largura fixa para o popup */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 15px;
+    /* Sobreposição com fundo semitransparente */
+    display: none;
+    /* Esconde o popup por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Garante que o popup ficará acima de outros elementos */
+    animation: slideInFromLeft 0.5s forwards;
+    /* Animação de deslizar da esquerda */
+}
+
+/* Animação de entrada (deslizar da esquerda para a direita) */
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%;
+        /* Começa fora da tela */
+    }
+
+    100% {
+        left: 0;
+        /* Termina na posição final à esquerda */
+    }
+}
+
+/* Conteúdo do popup */
+.popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.popupContent h3 {
+    color: #FFD700;
+    /* Cor dourada para o título */
+    font-size: 24px;
+}
+
+.popupContent p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.popupContent button {
+    background-color: #FF1493;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popupContent button:hover {
+    background-color: #e60073;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para a próxima linha */
+    justify-content: center;
+    gap: 15px;
+    /* Espaçamento entre os cards */
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #FECDCF;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 0 10px #FF91BC;
+    width: 200px;
+    /* Definido para o layout desktop */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #FF91BC;
+    box-shadow: 0 0 10px #FF91BC, 0 0 20px #FF91BC, 0 0 30px #FF91BC;
+    animation: neonEffect 1.5s infinite;
+
+}
+
+@keyframes neonEffect {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px #FF91BC, 0 0 20px #FF91BC, 0 0 30px #FF91BC;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #FF91BC, 0 0 40px #FF91BC, 0 0 60px #FF91BC;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Tablet */
+    .card {
+        width: 45%;
+        /* Reduz a largura para 45% */
+        height: 250px;
+        /* Ajusta a altura */
+    }
+
+    .cards {
+        flex-direction: row;
+        /* Cards em linha */
+        justify-content: space-between;
+        gap: 10px;
+        /* Menor espaçamento */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Mobile */
+    .card {
+        width: 90%;
+        /* Aumenta a largura para 90% para telas pequenas */
+        height: 250px;
+        /* Ajusta a altura */
+    }
+
+    .cards {
+        flex-direction: column;
+        /* Coloca os cards em coluna */
+        align-items: center;
+        /* Alinha os cards ao centro */
+        gap: 20px;
+        /* Maior espaçamento entre os cards */
+        padding: 15px;
+    }
+
+    h1,
+    h2 {
+        font-size: 28px;
+        /* Ajuste de tamanho de fonte */
+    }
+
+    h3 {
+        font-size: 24px;
+        /* Ajuste de tamanho de fonte */
+    }
+}
+
+
+.containerNovidades {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.containerBonus {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 20px 0px 20px 0px;
+
+}
+
+.containerBonus:last-of-type {
+    margin-bottom: 20px;
+}
+
+.bonus {
+    background-color: #FF1493;
+    border-radius: 20px;
+    width: 85%;
+    padding: 50px 10px 15px 10px;
+    display: flex;
+    box-shadow: 4px 4px 10px rgba(200, 200, 200, 0.7), 0px 10px 15px rgba(0, 0, 0, 0.6);
+    /* Sombra mais forte na parte inferior */
+
+
+}
+
+.containerIcone {
+    display: flex;
+}
+
+.containerIcone i {
+    margin: 5px;
+    color: #FFD700;
+    content: "\eb2e";
+
+}
+
+.containerCurso {
+    text-align: left;
+}
+
+.bonus div {
+    padding: 15px;
+}
+
+.bonus img {
+    width: 250px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .containerBonus {
+        justify-content: space-between;
+    }
+
+    .bonus {
+        width: 100%;
+        /* Aumenta a largura para ocupar 100% da tela */
+        padding: 30px 10px;
+        /* Ajuste o padding para telas menores */
+    }
+
+    .bonus img {
+        width: 180px;
+        /* Reduz a largura da imagem */
+    }
+
+    .containerCurso h3 {
+        font-size: 20px;
+        /* Ajusta o tamanho do título */
+    }
+
+    .containerCurso h5 {
+        font-size: 16px;
+        /* Ajusta o tamanho da descrição */
+    }
+
+    .containerIcone i {
+        font-size: 20px;
+        /* Ajusta o tamanho dos ícones */
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .containerBonus {
+        flex-direction: column;
+        /* Coloca os itens em coluna */
+        align-items: center;
+        /* Alinha ao centro */
+        padding: 15px;
+        /* Ajuste o padding para telas muito pequenas */
+    }
+
+    .bonus {
+        width: 90%;
+        /* Aumenta a largura dos bônus para 90% da tela */
+        padding: 20px 10px;
+        /* Ajuste o padding para telas menores */
+        flex-direction: column;
+        /* Organiza os elementos de forma vertical */
+        align-items: center;
+        /* Alinha ao centro */
+    }
+
+    .bonus img {
+        width: 150px;
+        /* Reduz a largura da imagem */
+        margin-bottom: 15px;
+        /* Adiciona um espaçamento abaixo da imagem */
+    }
+
+    .containerCurso h3 {
+        font-size: 18px;
+        /* Ajusta o tamanho do título */
+    }
+
+    .containerCurso h5 {
+        font-size: 14px;
+        /* Ajusta o tamanho da descrição */
+    }
+
+    .containerIcone i {
+        font-size: 18px;
+        /* Ajusta o tamanho dos ícones */
+    }
+
+    .containerAtencao {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .containerAtencao h4 {
+        font-size: 18px;
+        /* Ajusta o tamanho do texto */
+    }
+
+    .containerAtencao button {
+        padding: 12px 25px;
+        /* Ajuste do botão */
+        font-size: 16px;
+        /* Ajuste do texto no botão */
+    }
+}
+
+.containerAtencao {
+    background: linear-gradient(to bottom, #fff 0%, #000 100%);
+    /* Transição de preto para cinza */
+
+}
+
+.containerDepoimentos {
+    text-align: center;
+    padding: 0 30px 15px 0;
+    background-color: rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 25px 15px;
+
+}
+
+.containerDepoimentos H3 {
+    color: #FFD700;
+}
+
+.dep {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    /* Permite que os cartões se ajustem em várias linhas */
+    gap: 20px;
+    /* Espaço entre os cartões */
+}
+
+.card-dep {
+    width: 250px;
+    height: 300px;
+    background: url('/client/public/img/natura.png');
+    background-size: cover;
+    margin: 50px;
+    border-radius: 20px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 15px 5px rgba(255, 223, 0, 0.7);
+    /* Brilho dourado */
+    transition: box-shadow 0.3s ease;
+    /* Suaviza a transição de brilho */
+
+}
+
+.card-dep:hover {
+    box-shadow: 0 0 25px 10px rgba(255, 223, 0, 1);
+    /* Brilho dourado mais forte ao passar o mouse */
+
+}
+
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .containerDepoimentos h3 {
+        font-size: 20px;
+        /* Ajusta o tamanho do título para tablets */
+    }
+
+    .dep {
+        flex-wrap: wrap;
+        /* Ajusta os itens em várias linhas */
+        justify-content: space-around;
+        /* Distribui os itens de forma equitativa */
+    }
+
+    .card-dep {
+        width: 200px;
+        /* Ajusta a largura dos cartões para tablets */
+        height: 250px;
+        /* Ajusta a altura dos cartões para tablets */
+        margin: 20px 10px;
+        /* Ajusta a margem entre os cartões */
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .containerDepoimentos h3 {
+        font-size: 18px;
+        /* Ajusta o tamanho do título para dispositivos móveis */
+    }
+
+    .dep {
+        flex-direction: column;
+        /* Organiza os cartões em coluna */
+        align-items: center;
+        /* Alinha os itens ao centro */
+    }
+
+    .card-dep {
+        width: 90%;
+        /* Aumenta a largura para 90% da tela */
+        height: 400px;
+        /* Ajusta a altura dos cartões */
+        margin: 15px 0;
+        /* Ajusta a margem para dispositivos móveis */
+    }
+}
+
+.containerOferta {
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.containerOferta .titulo {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.oferta {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px 25px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #FF1493, #8B008B);
+    /* Gradiente de rosa claro para rosa escuro */
+    color: white;
+    /* Tornando o texto visível com a cor branca */
+}
+
+.contagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contagem div {
+    margin: 5px;
+    background-color: #FFD700;
+    border-radius: 20px;
+    width: 150px;
+    padding: 15px 25px;
+}
+
+.contagem div h3,
+.contagem div h4 {
+    margin: 0;
+}
+
+.pagamento button {
+    padding: 15px;
+    background-color: #FFD700;
+    color: #000;
+    border-radius: 15px;
+}
+
+/* Efeito para o primeiro span */
+.span-risk {
+    position: relative;
+    font-weight: bold;
+    color: #FF1493;
+    /* Cor do texto */
+}
+
+.span-risk::after {
+    content: 'X';
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    transform: rotate(45deg);
+    opacity: 0;
+    /* Inicialmente invisível */
+    animation: showX 2s infinite;
+    /* Chama a animação repetitiva */
+}
+
+@keyframes showX {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0.5);
+        /* Inicialmente invisível e pequeno */
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+        /* Visível e tamanho normal */
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0.5);
+        /* Volta a desaparecer e diminuir */
+    }
+}
+
+/* Efeito para o segundo span */
+.span-underline {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    color: #FFD700;
+    /* Cor do texto */
+}
+
+.span-underline::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #FFD700;
+    /* Cor do risco */
+    opacity: 0;
+    /* Inicialmente invisível */
+    animation: showUnderline 2s infinite;
+    /* Animação repetitiva do risco */
+}
+
+@keyframes showUnderline {
+    0% {
+        opacity: 0;
+        width: 0%;
+        /* Inicialmente invisível e sem largura */
+    }
+
+    50% {
+        opacity: 1;
+        width: 100%;
+        /* Risco visível e com largura completa */
+    }
+
+    100% {
+        opacity: 0;
+        width: 0%;
+        /* Risco desaparece novamente */
+    }
+}
+
+.containerPerguntas {
+    padding: 15px 35px;
+}
+
+.perguntas {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+.perguntas div {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.resposta {
+    display: none !important;
+    /* Oculta as respostas por padrão */
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze durante a animação */
+    max-height: 0;
+    /* Inicialmente com altura 0 para ocultar */
+    padding: 0 10px;
+    /* Ajusta o espaçamento das respostas */
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #333;
+    transition: max-height 0.5s ease-out, padding 0.3s ease;
+    /* Animação para altura e preenchimento */
+}
+
+.resposta.open {
+    display: block !important;
+    /* Torna visível quando a classe "open" for adicionada */
+    max-height: 500px;
+    /* Define a altura máxima para a animação */
+    padding: 10px 10px;
+    /* Ajusta o preenchimento durante a animação */
+}

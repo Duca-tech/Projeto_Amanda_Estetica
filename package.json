@@ -1,0 +1,21 @@
+{
+  "name": "projetoamanda",
+  "version": "1.0.0",
+  "description": "Projeto de estética, extensão de cilios da Amanda ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/Duca-Tech/Projeto_Amanda_Estetica.git"
+  },
+  "keywords": [
+    "Estetics",
+    "landing",
+    "page",
+    "cilios"
+  ],
+  "author": "Wilson Ducatti Junior e Matheus Silverio",
+  "license": "ISC"
+}
