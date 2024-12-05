@@ -1,5 +1,5 @@
 #inicial {
-    background-image: url(../img/BackgroundInicial.jpg);
+    background-image: url(../img/Background_Inicial.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,6 +8,7 @@
     display: flex; /* Cria um container flexbox */
     justify-self: center;
     align-items: flex-start;
+    padding: 20px;
 }
 
 
@@ -17,6 +18,8 @@
     width: 50%;
     text-align: left; /* Adiciona alinhamento à esquerda para todos os elementos */
     align-items: flex-start;
+    padding: 10% 5%;
+    
 }
 h1{
     font-size: 35px;
