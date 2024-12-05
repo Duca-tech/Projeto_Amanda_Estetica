@@ -28,3 +28,5 @@
 
     // Abre o popup automaticamente após 500ms (pode ser ajustado conforme necessário)
     setTimeout(abrirPopup, 500);
+
+

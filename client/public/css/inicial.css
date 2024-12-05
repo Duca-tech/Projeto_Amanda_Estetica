@@ -1,43 +1,83 @@
 #inicial {
-    background-image: url(../img/Background_Inicial.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-    display: flex; /* Cria um container flexbox */
-    justify-self: center;
-    align-items: flex-start;
-    padding: 20px;
+  background-image: url(../img/Background_Inicial.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex; /* Cria um container flexbox */
+  justify-content: center; /* Ajusta alinhamento horizontal */
+  align-items: flex-start;
+  padding: 20px;
+  flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
 }
-
-
 
 .textos {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 50%;
-    text-align: left; /* Adiciona alinhamento à esquerda para todos os elementos */
-    align-items: flex-start;
-    padding: 10% 5%;
-    
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  text-align: left;
+  padding: 10% 5%;
 }
-h1{
-    font-size: 35px;
-    color: #FF91BC;
+h1 {
+  font-size: 35px;
+  color: #FF91BC;
 }
 p {
   margin-bottom: 5px;
 }
-
 .video {
   box-shadow: 0 0 20px #FF91BC; /* Ajustar o valor da sombra conforme necessário */
   outline: 2px solid #FF91BC;
   margin-top: 20px;
   margin-bottom: 10px;
+  width: 100%; /* Adapta a largura do vídeo em telas menores */
+  max-width: 720px; /* Limita o tamanho máximo do vídeo */
+  height: auto; /* Mantém a proporção do vídeo */
 }
 .btn-insc {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
+/* Estilos específicos para telas menores */
+@media (max-width: 768px) {
+  .textos {
+      width: 90%; /* Ajusta a largura para ocupar quase toda a tela */
+      padding: 5%; /* Reduz o espaçamento */
+  }
+  h1 {
+      font-size: 28px; /* Reduz o tamanho do título */
+      text-align: center; /* Centraliza o título para melhor estética */
+  }
+  p {
+      font-size: 16px; /* Reduz o tamanho do texto */
+      text-align: center; /* Centraliza o texto */
+  }
+  .video {
+      width: 100%; /* Ocupa toda a largura da tela */
+      max-width: 100%; /* Remove o limite do tamanho máximo */
+  }
+}
 
+@media (max-width: 480px) {
+  h1 {
+      font-size: 24px; /* Título ainda menor para telas muito pequenas */
+  }
+  p {
+      font-size: 14px; /* Texto menor */
+  }
+  .btn-insc button {
+      font-size: 14px; /* Ajusta o tamanho do botão */
+      padding: 10px 20px; /* Melhora o espaçamento interno */
+  }
+
+  #inicial{
+    background-image: url(../img/BackgroundInicial_mobile.jpg);
+
+  }
+  .textos{
+    position: absolute;
+    top: 300px;
+  }
+}
