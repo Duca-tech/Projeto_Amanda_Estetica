@@ -1,0 +1,40 @@
+#inicial {
+    background-image: url(../img/BackgroundInicial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex; /* Cria um container flexbox */
+    justify-self: center;
+    align-items: flex-start;
+}
+
+
+
+.textos {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    text-align: left; /* Adiciona alinhamento à esquerda para todos os elementos */
+    align-items: flex-start;
+}
+h1{
+    font-size: 35px;
+    color: #FF91BC;
+}
+p {
+  margin-bottom: 5px;
+}
+
+.video {
+  box-shadow: 0 0 20px #FF91BC; /* Ajustar o valor da sombra conforme necessário */
+  outline: 2px solid #FF91BC;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.btn-insc {
+  display: flex;
+  justify-content: center;
+}
+
+

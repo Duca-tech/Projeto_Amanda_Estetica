@@ -1,0 +1,54 @@
+#curso {
+    background-image: url(../img/BackgroundCurso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex; /* Cria um container flexbox */
+    justify-self: center;
+    align-items: center;
+  }
+  
+  .textos {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    padding: 20px;
+    color: white;
+    display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    justify-content: center; /* Centraliza os itens na direção principal (vertical) */
+    align-items: center; /* Centraliza os itens na direção cruzada (horizontal), caso precise */
+  }
+  h1{
+    font-size: 45px;
+    color: #FF91BC;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  p{
+    font-size: 25px;
+  }
+
+  button.btn-cta {
+  background: linear-gradient(to right, #FECDCF, #FF91BC);
+  color: black; /* Cor branca */
+  font-family: serif; /* Fonte serif para um aspecto clássico */
+  font-weight: lighter;
+  font-size: 20PX;
+  margin-top: 25px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para profundidade */
+  transition: all 0.3s ease-in-out; /* Adiciona uma transição suave para hover */
+  }
+
+  .btn-cta:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    transition: all 0.3s ease-in-out;
+  }
