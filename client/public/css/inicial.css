@@ -1,22 +1,64 @@
+.cabecalho{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria três colunas de tamanho igual */
+  gap: 10px; /* Espaçamento entre as colunas */
+  width: 100%;
+
+}
+
+.cabecalho div:nth-child(1){
+  text-align: left;
+}
+.cabecalho ul{
+  display: flex;
+  padding: 10px 25px;
+  list-style: none;
+}
+
+.cabecalho ul li{
+  background-color: #FF91BC;
+  border-radius: 17px;
+  color: white;
+  margin: 0px 15px;
+  padding: 4px;
+  
+}
+.cabecalho ul li:hover{
+  cursor:pointer;
+  background-color: darkblue;
+}
+
 #inicial {
   background-image: url(../img/Background_Inicial.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   display: flex; /* Cria um container flexbox */
   justify-content: center; /* Ajusta alinhamento horizontal */
   align-items: flex-start;
-  padding: 20px;
+  padding: 10px 25px;
   flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+  position: relative;
+}
+
+#inicial::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Ajuste a altura do degradê conforme necessário */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  pointer-events: none; /* Garante que o degradê não interfira em cliques */
 }
 
 .textos {
   font-family: Arial, Helvetica, sans-serif;
-  width: 50%;
+  /* width: 50%; */
   text-align: left;
-  padding: 10% 5%;
+  /* padding: 10% 5%; */
 }
 h1 {
   font-size: 35px;
@@ -25,15 +67,117 @@ h1 {
 p {
   margin-bottom: 5px;
 }
+
+.containervideo {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  width: 600px;
+  height: 340px; /* Ajuste conforme o vídeo */
+  overflow: hidden; /* Garante que o efeito não ultrapasse os limites */
+  border-radius: 10px; /* Opcional: bordas arredondadas */
+  padding: 5px;
+}
+
+/* Borda animada com brilho */
+.containervideo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 1px solid #FF91BC;
+  box-sizing: border-box;
+  z-index: 1; /* Coloca a borda atrás do vídeo */
+  border-radius: 10px; /* Opcional: acompanha o container */
+  animation: border-top 3s infinite alternate; 
+}
+
+.containervideo::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 1px solid #FF91BC;
+  box-sizing: border-box;
+  z-index: 1; /* Coloca a borda atrás do vídeo */
+  border-radius: 10px; /* Opcional: acompanha o container */
+  animation: border-bottom 3s infinite alternate; 
+}
+
+@keyframes border-bottom {
+  0%{
+    width: 0px;
+    height: 0px;
+  }
+  50%{
+    width: 0px;
+    height: 0px;
+    /* box-shadow: 0 0 10px 10px  #fff; */
+
+  }
+  50.1%{
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  75%{
+    width: 600px;
+    height: 0px;
+    opacity: 1;
+    box-shadow: 0 0 10px 5px  #FF91BC;
+
+  }
+  100%{
+    width: 600px;
+    height: 340px;
+    opacity: 1;
+    box-shadow: 0 0 10px 5px  #FF91BC;
+
+  }
+  
+}
+
+@keyframes border-top {
+  0%{
+    width: 0px;
+    height: 0px;
+  }  
+  25%{
+    width: 600px;
+    height: 0px;
+  }
+  50%{
+    width: 600px;
+    height: 0px;
+    box-shadow: 0 0 10px 10px  #fff;
+  }
+  100%{
+    width: 600px;
+    height: 340px;
+    box-shadow: 0 0 10px 10px  #fff;
+
+  }
+
+}
+
 .video {
-  box-shadow: 0 0 20px #FF91BC; /* Ajustar o valor da sombra conforme necessário */
-  outline: 2px solid #FF91BC;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  position: relative;
+  z-index: 2; /* Garante que o vídeo fique acima das bordas animadas */
   width: 100%; /* Adapta a largura do vídeo em telas menores */
-  max-width: 720px; /* Limita o tamanho máximo do vídeo */
+  max-width: 100%;
   height: auto; /* Mantém a proporção do vídeo */
 }
+
+
+
+
+
+
 .btn-insc {
   display: flex;
   justify-content: center;
@@ -73,11 +217,19 @@ p {
   }
 
   #inicial{
-    background-image: url(../img/BackgroundInicial_mobile.jpg);
+    background-image: url(../img/BackgroundInicial_mobile001.jpg);
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+
 
   }
-  .textos{
-    position: absolute;
-    top: 300px;
+  .textosInicial{
+      margin-top: 350px;
+      /* padding-top: 50px; */
+  }
+  .containervideo{
+    width: 350px;
+    height: 250px;
   }
 }
