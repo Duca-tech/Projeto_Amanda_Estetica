@@ -1,33 +1,3 @@
-.cabecalho{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Cria três colunas de tamanho igual */
-  gap: 10px; /* Espaçamento entre as colunas */
-  width: 100%;
-
-}
-
-.cabecalho div:nth-child(1){
-  text-align: left;
-}
-.cabecalho ul{
-  display: flex;
-  padding: 10px 25px;
-  list-style: none;
-}
-
-.cabecalho ul li{
-  background-color: #FF91BC;
-  border-radius: 17px;
-  color: white;
-  margin: 0px 15px;
-  padding: 4px;
-  
-}
-.cabecalho ul li:hover{
-  cursor:pointer;
-  background-color: darkblue;
-}
-
 #inicial {
   background-image: url(../img/Background_Inicial.jpg);
   background-repeat: no-repeat;
@@ -36,10 +6,10 @@
   /* height: 100vh; */
   width: 100vw;
   display: flex; /* Cria um container flexbox */
-  justify-content: center; /* Ajusta alinhamento horizontal */
-  align-items: flex-start;
+  justify-content: flex-end; /* Ajusta alinhamento horizontal */
+  align-items: center;
   padding: 10px 25px;
-  flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+  flex-direction: column;
   position: relative;
 }
 
@@ -54,11 +24,16 @@
   pointer-events: none; /* Garante que o degradê não interfira em cliques */
 }
 
+.headline{
+  color: white;
+  font-size: 10px;
+  
+}
+
 .textos {
   font-family: Arial, Helvetica, sans-serif;
-  width: 50%;
   padding: 20px;
-  color: white;
+  color: black;
   display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
   flex-direction: column; /* Define a direção dos itens como coluna */
   justify-content: center; /* Centraliza os itens na direção principal (vertical) */
@@ -68,113 +43,48 @@
 h1 {
   font-size: 35px;
   color: #FF91BC;
+  margin-bottom: 20px;
 }
 p {
   margin-bottom: 5px;
 }
 
 .containervideo {
+  margin-top: 2%;
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: start;
   width: 600px;
-  height: 340px; /* Ajuste conforme o vídeo */
-  overflow: hidden; /* Garante que o efeito não ultrapasse os limites */
-  border-radius: 10px; /* Opcional: bordas arredondadas */
-  padding: 5px;
+  height: 340px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); /* Sombra externa com cor neon */
+  outline: 2px solid rgba(255, 0, 255, 1); /* Contorno neon */
+  animation: neon-glow 1s alternate infinite; /* Animação de piscar */
 }
 
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    outline: 2px solid rgba(255, 0, 255, 1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 0, 255, 1);
+    outline: 4px solid rgba(255, 0, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    outline: 2px solid rgba(255, 0, 255, 1);
+  }
+}
 /* Borda animada com brilho */
-.containervideo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 1px solid #FF91BC;
-  box-sizing: border-box;
-  z-index: 1; /* Coloca a borda atrás do vídeo */
-  border-radius: 10px; /* Opcional: acompanha o container */
-  animation: border-top 3s infinite alternate; 
-}
 
-.containervideo::after{
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border: 1px solid #FF91BC;
-  box-sizing: border-box;
-  z-index: 1; /* Coloca a borda atrás do vídeo */
-  border-radius: 10px; /* Opcional: acompanha o container */
-  animation: border-bottom 3s infinite alternate; 
-}
 
-@keyframes border-bottom {
-  0%{
-    width: 0px;
-    height: 0px;
-  }
-  50%{
-    width: 0px;
-    height: 0px;
-    /* box-shadow: 0 0 10px 10px  #fff; */
-
-  }
-  50.1%{
-    width: 0px;
-    height: 0px;
-    opacity: 1;
-  }
-  75%{
-    width: 600px;
-    height: 0px;
-    opacity: 1;
-    box-shadow: 0 0 10px 5px  #FF91BC;
-
-  }
-  100%{
-    width: 600px;
-    height: 340px;
-    opacity: 1;
-    box-shadow: 0 0 10px 5px  #FF91BC;
-
-  }
-  
-}
-
-@keyframes border-top {
-  0%{
-    width: 0px;
-    height: 0px;
-  }  
-  25%{
-    width: 600px;
-    height: 0px;
-  }
-  50%{
-    width: 600px;
-    height: 0px;
-    box-shadow: 0 0 10px 10px  #fff;
-  }
-  100%{
-    width: 600px;
-    height: 340px;
-    box-shadow: 0 0 10px 10px  #fff;
-
-  }
-
-}
 
 .video {
   position: relative;
   z-index: 2; /* Garante que o vídeo fique acima das bordas animadas */
   width: 100%; /* Adapta a largura do vídeo em telas menores */
-  max-width: 100%;
   height: auto; /* Mantém a proporção do vídeo */
 }
 
@@ -188,6 +98,17 @@ p {
   justify-content: start;
   margin-top: 20px;
 }
+
+.textosInicial{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
+.textosInicial div{
+ 
+    flex-grow: 1;
+  
+}
+
 
 /* Estilos específicos para telas menores */
 @media (max-width: 768px) {
@@ -231,6 +152,8 @@ p {
   }
   .textosInicial{
       margin-top: 350px;
+      margin:0 ;
+
       
       /* padding-top: 50px; */
   }

@@ -18,15 +18,17 @@
   }
 
   p{
-    font-size: 25px;
+    font-size: 20px;
   }
+  
+
 
   button.btn-cta {
   background: linear-gradient(to right, #FECDCF, #FF91BC);
   color: black; /* Cor branca */
   font-family: serif; /* Fonte serif para um aspecto clássico */
   font-weight: lighter;
-  font-size: 20PX;
+  font-size: 20px;
   margin-top: 25px;
   padding: 15px 30px;
   border: none;

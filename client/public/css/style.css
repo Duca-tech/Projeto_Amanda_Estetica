@@ -43,7 +43,6 @@ button {
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: expandirContrair 2s infinite;
     margin: 15px;
 }
 
