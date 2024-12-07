@@ -180,7 +180,7 @@ p {
 
 .btn-insc {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-top: 20px;
 }
 
@@ -226,8 +226,14 @@ p {
   }
   .textosInicial{
       margin-top: 350px;
+      
       /* padding-top: 50px; */
   }
+
+  .textosInicial div p{
+    color: white;
+  }
+  .textosInicial 
   .containervideo{
     width: 350px;
     height: 250px;
