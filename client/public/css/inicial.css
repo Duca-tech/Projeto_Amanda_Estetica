@@ -3,10 +3,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* height: 100vh; */
   width: 100vw;
-  display: flex; /* Cria um container flexbox */
-  justify-content: flex-end; /* Ajusta alinhamento horizontal */
+  display: flex; 
+  justify-content: flex-end;
   align-items: center;
   padding: 10px 25px;
   flex-direction: column;
@@ -25,7 +24,7 @@
 }
 
 .headline{
-  color: white;
+  color: #fff;
   font-size: 10px;
   
 }
@@ -37,12 +36,16 @@
   display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
   flex-direction: column; /* Define a direção dos itens como coluna */
   justify-content: center; /* Centraliza os itens na direção principal (vertical) */
-  align-items: center; /* Centraliza os itens na direção cruzada (horizontal), caso precise */
+  align-items: start; /* Centraliza os itens na direção cruzada (horizontal), caso precise */
+  width: 50%;
+}
+.textos p{
+  color: white;
 }
 
 h1 {
   font-size: 35px;
-  color: #FF91BC;
+  color: #D8B8B0;
   margin-bottom: 20px;
 }
 p {
@@ -58,23 +61,23 @@ p {
   width: 600px;
   height: 340px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); /* Sombra externa com cor neon */
-  outline: 2px solid rgba(255, 0, 255, 1); /* Contorno neon */
+  box-shadow: 0 0 20px rgba(240, 180, 240, 0.5); /* Sombra externa com cor neon */
+  outline: 2px solid rgba(240, 180, 240, 1);
   animation: neon-glow 1s alternate infinite; /* Animação de piscar */
 }
 
 @keyframes neon-glow {
   0% {
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-    outline: 2px solid rgba(255, 0, 255, 1);
+    box-shadow: 0 0 20px rgba(240, 180, 240, 1);
+    outline: 2px solid rgba(240, 180, 240, 1);
   }
   50% {
-    box-shadow: 0 0 40px rgba(255, 0, 255, 1);
-    outline: 4px solid rgba(255, 0, 255, 1);
+    box-shadow: 0 0 40px rgba(240, 180, 240, 1);
+    outline: 4px solid rgba(240, 180, 240, 1);
   }
   100% {
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-    outline: 2px solid rgba(255, 0, 255, 1);
+    box-shadow: 0 0 20px rgba(240, 180, 240, 1);
+    outline: 2px solid rgba(240, 180, 240, 1);
   }
 }
 /* Borda animada com brilho */

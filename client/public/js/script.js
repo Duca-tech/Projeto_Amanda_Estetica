@@ -30,3 +30,10 @@
     setTimeout(abrirPopup, 500);
 
 
+
+    // window.addEventListener('scroll', () => {
+    //     const scrolled = window.scrollY;
+      
+    //     document.querySelector('.containerTecnicas').style.backgroundPositionY = `${scrolled * 0.5}px`;
+    //     document.querySelector('.containerNovidades').style.backgroundPositionY = `${(scrolled - window.innerHeight) * 0.5}px`;
+    //   });
