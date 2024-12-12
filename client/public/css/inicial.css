@@ -42,7 +42,7 @@
 
 h1 {
   font-size: 35px;
-  color: #FF91BC;
+  color: #FF3D89;
   margin-bottom: 20px;
 }
 p {
@@ -50,7 +50,7 @@ p {
 }
 
 .containervideo {
-  margin-top: 2%;
+  margin-top: 10px;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -59,22 +59,22 @@ p {
   height: 340px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); /* Sombra externa com cor neon */
-  outline: 2px solid rgba(255, 0, 255, 1); /* Contorno neon */
+  outline: 2px solid #FF3D89; /* Contorno neon */
   animation: neon-glow 1s alternate infinite; /* Animação de piscar */
 }
 
 @keyframes neon-glow {
   0% {
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-    outline: 2px solid rgba(255, 0, 255, 1);
+    outline: 2px solid #FF3D89;
   }
   50% {
     box-shadow: 0 0 40px rgba(255, 0, 255, 1);
-    outline: 4px solid rgba(255, 0, 255, 1);
+    outline: 4px solid #FF3D89;
   }
   100% {
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-    outline: 2px solid rgba(255, 0, 255, 1);
+    outline: 2px solid #FF3D89;
   }
 }
 /* Borda animada com brilho */
@@ -87,10 +87,6 @@ p {
   width: 100%; /* Adapta a largura do vídeo em telas menores */
   height: auto; /* Mantém a proporção do vídeo */
 }
-
-
-
-
 
 
 .btn-insc {
@@ -152,7 +148,7 @@ p {
   }
   .textosInicial{
       margin-top: 350px;
-      margin:0 ;
+      margin: 0;
 
       
       /* padding-top: 50px; */
