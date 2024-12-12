@@ -3,13 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* height: 100vh; */
   width: 100vw;
   display: flex; /* Cria um container flexbox */
   justify-content: flex-end; /* Ajusta alinhamento horizontal */
   align-items: center;
-  padding: 10px 25px;
-  flex-direction: column;
   position: relative;
 }
 
@@ -93,7 +90,9 @@ p {
   width: 100%;
 }
 
-
+.textosInicial p{
+  font-size: 20px;
+}
 
 .textosInicial div{
  
