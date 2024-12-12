@@ -25,7 +25,10 @@
 }
 
 .headline{
+  width: 50%;
   color: #fff;
+  justify-content: flex-start;
+  align-items: flex-start;
   font-size: 10px;
   
 }
@@ -90,9 +93,7 @@ p {
   width: 100%;
 }
 
-.textosInicial p{
-  font-size: 20px;
-}
+
 
 .textosInicial div{
  
