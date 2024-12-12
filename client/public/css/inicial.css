@@ -3,9 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  /* height: 100vh; */
   width: 100vw;
-  display: flex; 
-  justify-content: flex-end;
+  display: flex; /* Cria um container flexbox */
+  justify-content: flex-end; /* Ajusta alinhamento horizontal */
   align-items: center;
   padding: 10px 25px;
   flex-direction: column;
@@ -24,40 +25,26 @@
 }
 
 .headline{
-  color: #fff;
-  font-size: 10px;
-  
+  color: white;
+  width: 50%;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.textos {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
-  color: black;
-  display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
-  flex-direction: column; /* Define a direção dos itens como coluna */
-  justify-content: center; /* Centraliza os itens na direção principal (vertical) */
-  align-items: start; /* Centraliza os itens na direção cruzada (horizontal), caso precise */
-  width: 50%;
-}
-.textos p{
-  color: white;
-}
+
 
 h1 {
   font-size: 35px;
-<<<<<<< HEAD
   color: #FF3D89;
-=======
-  color: #D8B8B0;
->>>>>>> 03ba639ac8edc4fa1a493115a2d4ea142ebd40a8
   margin-bottom: 20px;
-}
+} 
 p {
   margin-bottom: 5px;
 }
 
 .containervideo {
-  margin-top: 10px;
+  margin-top: 30px;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -65,19 +52,13 @@ p {
   width: 600px;
   height: 340px;
   overflow: hidden;
-<<<<<<< HEAD
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); /* Sombra externa com cor neon */
   outline: 2px solid #FF3D89; /* Contorno neon */
-=======
-  box-shadow: 0 0 20px rgba(240, 180, 240, 0.5); /* Sombra externa com cor neon */
-  outline: 2px solid rgba(240, 180, 240, 1);
->>>>>>> 03ba639ac8edc4fa1a493115a2d4ea142ebd40a8
   animation: neon-glow 1s alternate infinite; /* Animação de piscar */
 }
 
 @keyframes neon-glow {
   0% {
-<<<<<<< HEAD
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
     outline: 2px solid #FF3D89;
   }
@@ -88,18 +69,6 @@ p {
   100% {
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
     outline: 2px solid #FF3D89;
-=======
-    box-shadow: 0 0 20px rgba(240, 180, 240, 1);
-    outline: 2px solid rgba(240, 180, 240, 1);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(240, 180, 240, 1);
-    outline: 4px solid rgba(240, 180, 240, 1);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(240, 180, 240, 1);
-    outline: 2px solid rgba(240, 180, 240, 1);
->>>>>>> 03ba639ac8edc4fa1a493115a2d4ea142ebd40a8
   }
 }
 /* Borda animada com brilho */
@@ -120,15 +89,22 @@ p {
   margin-top: 20px;
 }
 
-.textosInicial{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+.textosInicial {
+  display: flex;
+  width: 100%;
 }
+
+.textosInicial p{
+  font-size: 20px;
+}
+
 .textosInicial div{
  
     flex-grow: 1;
   
 }
+
+
 
 
 /* Estilos específicos para telas menores */
@@ -164,7 +140,7 @@ p {
   }
 
   #inicial{
-    background-image: url(../img/BackgroundInicial_mobile001.jpg);
+    background-image: url(../img/BackgroundInicial_mobile.jpg);
     background-size: contain;
     background-position: center;
     background-color: black;

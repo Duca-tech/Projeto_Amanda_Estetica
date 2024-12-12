@@ -3,14 +3,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
     display: flex; /* Cria um container flexbox */
     justify-content: flex-end; /* Ajusta alinhamento horizontal */
     align-items: center;
     padding: 10px 25px;
     flex-direction: column;
-    position: relative;
+    position: relative; 
   }
   
   #curso::after{
@@ -24,6 +24,16 @@
     pointer-events: none; /* Garante que o degradê não interfira em cliques */
   }
 
+  .textos {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    color: black;
+    display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    justify-content: flex-start; /* Centraliza os itens na direção principal (vertical) */
+    align-items: flex-start; /* Centraliza os itens na direção cruzada (horizontal), caso precise */
+  }
+
   h1{
     font-size: 45px;
     color: #FF91BC;
@@ -32,7 +42,7 @@
   }
 
   p{
-    font-size: 20px;
+    font-size: 15px;
   }
   
 
