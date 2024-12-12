@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,6 +15,8 @@
 
 .containerTecnicas {
     text-align: center;
+    background-color: #dadadf;
+    overflow: hidden;
 
 }
 
@@ -33,6 +36,7 @@ h3 {
 h5 {
     font-family: 'Poppins', sans-serif;
 }
+
 
 button {
     padding: 10px 20px;
@@ -130,64 +134,90 @@ button {
     background-color: #e60073;
 }
 
-.containerInicial{
+.containerInicial {
     /* height: 800px; */
     background-color: #000;
 
 }
-.headerInicial{
+
+.headerInicial {
     display: flex;
     justify-content: center;
     align-items: center;
     /* height: 200px; */
 }
-.headerInicial div{
+
+.headerInicial div {
     width: 30%;
     height: 100px;
-    overflow: hidden; /* Impede que a imagem "vaze" da div */
-    
+    overflow: hidden;
+    /* Impede que a imagem "vaze" da div */
+
 
 }
+
 .headerInicial div:first-of-type {
     padding: 10px 15px;
     box-sizing: border-box;
 }
+
 .headerInicial div:last-of-type {
     text-align: right;
     padding: 20px;
     box-sizing: border-box;
 }
-.headerInicial div img{
-    max-width: 200px; /* A imagem não será mais larga que a largura da div*/
-    max-height: 100px; /*A imagem não será mais alta que a altura da div */
-    object-fit: contain; /* Ajusta a imagem para se encaixar na div */
+
+.headerInicial div img {
+    max-width: 200px;
+    /* A imagem não será mais larga que a largura da div*/
+    max-height: 100px;
+    /*A imagem não será mais alta que a altura da div */
+    object-fit: contain;
+    /* Ajusta a imagem para se encaixar na div */
 }
-.headerInicial div:nth-child(2){
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: 2px solid #000; /* Apenas para visualização */}
+
+.headerInicial div:nth-child(2) {
+    display: flex;
+    /* Ativa o Flexbox */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    border: 2px solid #000;
+    /* Apenas para visualização */
+}
 
 .headerInicial div ul {
-    display: flex; /* Alinha os itens na horizontal */
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o preenchimento padrão */
-    margin: 0; /* Remove a margem padrão */
-    justify-content: center; /* Centraliza os itens dentro do contêiner */
-    gap: 10px; /* Espaçamento entre os itens */
+    display: flex;
+    /* Alinha os itens na horizontal */
+    list-style: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o preenchimento padrão */
+    margin: 0;
+    /* Remove a margem padrão */
+    justify-content: center;
+    /* Centraliza os itens dentro do contêiner */
+    gap: 10px;
+    /* Espaçamento entre os itens */
     color: white;
 }
 
 .headerInicial div ul li {
-    padding: 10px 15px; /* Adiciona espaçamento interno */
+    padding: 10px 15px;
+    /* Adiciona espaçamento interno */
     /* background-color: #f5f5f5; Cor de fundo para cada item */
-    border-radius: 25px; /* Bordas arredondadas */
-    transition: border-bottom 0.3s; /* Efeito ao passar o mouse */
+    border-radius: 25px;
+    /* Bordas arredondadas */
+    transition: border-bottom 0.3s;
+    /* Efeito ao passar o mouse */
 }
 
 .headerInicial div ul li:hover {
-    border-bottom: 2px solid #e60073; /* Muda a cor ao passar o mouse */
-    cursor: pointer; /* Mostra o cursor de mão */
+    border-bottom: 2px solid #e60073;
+    /* Muda a cor ao passar o mouse */
+    cursor: pointer;
+    /* Mostra o cursor de mão */
 }
 
 .headerInicial div ul li {
@@ -195,28 +225,60 @@ button {
 
 }
 
-.bodyInicial{
+.bodyInicial {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px 20px;
 }
-.bodyInicial div{
+
+.bodyInicial div {
     width: 50%;
 }
-.bodyInicial h3, h2{
+
+.bodyInicial h3,
+h2 {
     color: #fff;
 }
 
-.maquiagem{
-    background-color: rgba(255, 182, 193, 0.7); /* Rosa claro com 70% de opacidade */
+.maquiagem {
+    background-color: rgba(255, 182, 193, 0.7);
+    /* Rosa claro com 70% de opacidade */
     border-radius: 30%;
     padding: 20px;
     height: 400px;
 }
 
 
+.containerTecnicas h1 {
+    color: #6d6865;
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255, 255, 255, 0.98);
+    text-transform: uppercase;
+    font-size: 2.4rem;
 
+}
+
+.containerTecnicas p {
+    color: #cbdde0;
+}
+.card-desribe{
+    padding: 10px 5px;
+}
+
+.card-button button:nth-child(1){
+    border-radius: 17px;
+    border: 1px solid #cccfde;  
+    color: #e4bfb1;
+    background-color: transparent;
+}
+
+.card-button button:nth-child(2){
+    border-radius: 17px;
+    border: 1px solid #cccfde;
+    color: white;
+    background-color: #cccfde;
+}
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -229,23 +291,48 @@ button {
 .card {
     margin: 10px;
     padding: 10px;
-    border: 2px solid #FECDCF;
     border-radius: 25px;
     position: relative;
-    box-shadow: 0 0 10px #FF91BC;
-    width: 200px;
-    /* Definido para o layout desktop */
-    height: 300px;
+    box-shadow: 0 0 10px #cccfde;
+    width: 280px;
+    height: 400px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 38px;
+    filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+}
+.card-desribe{
+    border: 1px solid #a3a3a6;
+    border-radius: 17px;
+    margin: 10px;
+    background-color: rgba(151, 23, 23, 0.4);        
+
+
+}       
+
+.card-back-img {
+    background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.255)
 }
 
 .titulo {
     text-align: center;
 }
 
+/* 
 .card img {
     width: 150px;
     height: 150px;
@@ -254,7 +341,7 @@ button {
     box-shadow: 0 0 10px #FF91BC, 0 0 20px #FF91BC, 0 0 30px #FF91BC;
     animation: neonEffect 1.5s infinite;
 
-}
+} */
 
 @keyframes neonEffect {
 
@@ -319,13 +406,60 @@ button {
     }
 }
 
-
 .containerNovidades {
-    text-align: center;
-    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 0;
     padding: 0;
+    background: url('/client/public/img/2.jpeg') no-repeat center center;
+    background-size: cover; /* Faz a imagem preencher o espaço */
+    background-attachment: fixed;
+}
 
+.containerNovidades::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Ajuste a transparência aqui */
+    z-index: 1; /* Overlay abaixo do conteúdo */
+}
+
+.containerNovidades > * {
+    position: relative; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 2;
+}
+
+.card-wrapper{
+    position: relative;
+
+}
+
+.card-wrapper .card{
+    position: relative;
+}
+
+.card-imagem{
+    width: 80vh;
+    height: 80vh;
+    background-image: url('/client/public/img/20.jpeg');    
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    position: relative;
+}
+
+.card-imagem{
+    -webkit-mask: url("/client/public/img/Group\ 1.svg");
 }
 
 .containerBonus {
@@ -578,6 +712,10 @@ button {
 .containerOferta .titulo {
     width: 80%;
     margin: 0 auto;
+}
+
+.containerNovidades .titulo h5{
+    color: white;
 }
 
 .oferta {
