@@ -8,6 +8,7 @@
     justify-self: center;
     align-items: center;
     position: relative;
+    padding: 0 25px;
   }
   
   #curso::after{
@@ -55,4 +56,18 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
     transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
     transition: all 0.3s ease-in-out;
+  }
+
+  .textos {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    color: black;
+    display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    justify-content: center; /* Centraliza os itens na direção principal (vertical) */
+    align-items: start; /* Centraliza os itens na direção cruzada (horizontal), caso precise */
+    width: 50%;
+  }
+  .textos p{
+    color: white;
   }

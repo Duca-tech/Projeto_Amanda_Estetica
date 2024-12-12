@@ -17,8 +17,21 @@
     text-align: center;
     background-color: #dadadf;
     overflow: hidden;
+    position: relative; /* Necessário para posicionar o elemento pseudo */
+    padding: 35px 25px;
 
 }
+
+/* .containerTecnicas::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #000);
+} */
+
 
 h1,
 h2 {
@@ -266,19 +279,17 @@ h2 {
     padding: 10px 5px;
 }
 
-.card-button button:nth-child(1){
+.card-button button {
     border-radius: 17px;
-    border: 1px solid #cccfde;  
-    color: #e4bfb1;
-    background-color: transparent;
+    border: 1px solid #d088e8;  
+    color: #fff;
+    opacity:0.4 ;
 }
 
-.card-button button:nth-child(2){
-    border-radius: 17px;
-    border: 1px solid #cccfde;
-    color: white;
-    background-color: #cccfde;
+.card-button button:hover {
+    opacity: 1;
 }
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -298,7 +309,6 @@ h2 {
     height: 400px;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 38px;
@@ -309,24 +319,19 @@ h2 {
     justify-content: center;
     text-align: center;
 }
+
+.card img {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px;
+    border-radius: 50%; /* Transforma a imagem em um círculo */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche todo o espaço */
+  }
 .card-desribe{
-    border: 1px solid #a3a3a6;
     border-radius: 17px;
     margin: 10px;
-    background-color: rgba(151, 23, 23, 0.4);        
-
-
 }       
 
-.card-back-img {
-    background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    width: 100%;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.255)
-}
+
 
 .titulo {
     text-align: center;
@@ -414,9 +419,20 @@ h2 {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background: url('/client/public/img/2.jpeg') no-repeat center center;
+    background: url('/client/public/img/150.jpeg') no-repeat center center;
     background-size: cover; /* Faz a imagem preencher o espaço */
+    background-position: center;
     background-attachment: fixed;
+}
+
+.containerNovidades::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
 }
 
 .containerNovidades::before {
@@ -442,25 +458,28 @@ h2 {
 
 .card-wrapper .card{
     position: relative;
+    width: 700px;
 }
 
 .card-imagem{
     width: 80vh;
     height: 80vh;
-    background-image: url('/client/public/img/20.jpeg');    
-    background-position: 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
+    border-radius: 50%; /* Cria um círculo */
+    background-color: transparent;
+    border: 10px solid;
+    border-image: linear-gradient(to bottom, #f0f0f0, transparent) 1;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
     border-bottom-left-radius: 2.5rem;
+    padding: 15px;
     position: relative;
 }
 
-.card-imagem{
-    -webkit-mask: url("/client/public/img/Group\ 1.svg");
+.card-imagem img{
+    border-radius: 50%;
 }
+
+
 
 .containerBonus {
     display: flex;
@@ -594,6 +613,7 @@ h2 {
 
     .containerAtencao h4 {
         font-size: 18px;
+        color: white;
         /* Ajusta o tamanho do texto */
     }
 
@@ -605,24 +625,35 @@ h2 {
     }
 }
 
-.containerAtencao {
-    background: linear-gradient(to bottom, #fff 0%, #000 100%);
-    /* Transição de preto para cinza */
 
-}
 
 .containerDepoimentos {
+    height: 100vh;
     text-align: center;
     padding: 0 30px 15px 0;
-    background-color: rgba(0, 0, 0, 1);
+    background-image: url('/client/public/img/Background_Inicial.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center center; /* Centers the image */
+    background-blend-mode: multiply; /* Blends the image with the background color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     box-sizing: border-box;
     margin: 0;
     padding: 25px 15px;
+    position: relative;
+}
 
+.containerDepoimentos::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    background: linear-gradient(to bottom, #000, #ccc);
 }
 
 .containerDepoimentos H3 {
-    color: #FFD700;
+    color: #ccc;
 }
 
 .dep {
@@ -642,8 +673,8 @@ h2 {
     background-size: cover;
     margin: 50px;
     border-radius: 20px;
-    border: 2px solid #FFD700;
-    box-shadow: 0 0 15px 5px rgba(255, 223, 0, 0.7);
+    border: 2px solid #b259a9;
+    box-shadow: 0 0 15px 5px rgba(179, 77, 145, 0.7);
     /* Brilho dourado */
     transition: box-shadow 0.3s ease;
     /* Suaviza a transição de brilho */
@@ -651,7 +682,7 @@ h2 {
 }
 
 .card-dep:hover {
-    box-shadow: 0 0 25px 10px rgba(255, 223, 0, 1);
+    box-shadow: 0 0 25px 10px rgb(227, 53, 206);
     /* Brilho dourado mais forte ao passar o mouse */
 
 }
