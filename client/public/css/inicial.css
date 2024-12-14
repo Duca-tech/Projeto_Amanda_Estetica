@@ -21,7 +21,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: 10px; 
   text-align: left; 
 }
 
@@ -88,7 +87,7 @@ p {
 }
 
 .textosInicial p{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .textosInicial div{
@@ -121,6 +120,7 @@ p {
 }
 
 @media (max-width: 480px) {
+  
   h1 {
       font-size: 24px; /* Título ainda menor para telas muito pequenas */
   }
@@ -132,15 +132,35 @@ p {
       padding: 10px 20px; /* Melhora o espaçamento interno */
   }
 
+  .headline {
+    margin-top: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center; 
+  }
+  .btn-insc {
+    display: flex;
+    justify-content: center;
+  }
   #inicial{
     background-image: url(../img/BackgroundInicial_mobile.jpg);
     background-size: contain;
-    background-position: center;
+    background-position: top;
     background-color: black;
 
 
   }
+
+  
   .textosInicial{
+      text-align: center;
+      justify-content: center;
+      align-items: center;
       margin-top: 350px;
       margin: 0;
 
@@ -148,12 +168,22 @@ p {
       /* padding-top: 50px; */
   }
 
+  .textosInicial p{
+    font-size: 13px;
+  }
+
   .textosInicial div p{
     color: white;
   }
   .textosInicial 
   .containervideo{
-    width: 350px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
   }
 }
+
+
+
