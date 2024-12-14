@@ -5,30 +5,23 @@
   background-position: center;
   width: 100vw;
   display: flex; /* Cria um container flexbox */
-  justify-content: flex-end; /* Ajusta alinhamento horizontal */
-  align-items: center;
+  justify-content: flex-start; /* Ajusta alinhamento horizontal */
+  padding: 10px 25px;
+  font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  padding: 25px 25px;
 }
 
-#inicial::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px; /* Ajuste a altura do degradê conforme necessário */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  pointer-events: none; /* Garante que o degradê não interfira em cliques */
-}
 
-.headline{
+
+.headline {
+  font-family: Arial, Helvetica, sans-serif;
   width: 50%;
   color: #fff;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: 10px;
-  
+  text-align: left; 
 }
 
 h1 {
@@ -89,10 +82,12 @@ p {
 .textosInicial {
   display: flex;
   width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .textosInicial p{
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .textosInicial div{
@@ -125,6 +120,7 @@ p {
 }
 
 @media (max-width: 480px) {
+  
   h1 {
       font-size: 24px; /* Título ainda menor para telas muito pequenas */
   }
@@ -136,6 +132,21 @@ p {
       padding: 10px 20px; /* Melhora o espaçamento interno */
   }
 
+  .headline {
+    margin-top: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center; 
+  }
+  .btn-insc {
+    display: flex;
+    justify-content: center;
+  }
   #inicial{
     background-image: url(../img/BackgroundInicial_mobile.jpg);
     background-size: contain;
@@ -144,12 +155,21 @@ p {
 
 
   }
+
+  
   .textosInicial{
+      text-align: center;
+      justify-content: center;
+      align-items: center;
       margin-top: 350px;
       margin: 0;
-      
+
       
       /* padding-top: 50px; */
+  }
+
+  .textosInicial p{
+    font-size: 13px;
   }
 
   .textosInicial div p{
@@ -157,15 +177,13 @@ p {
   }
   .textosInicial 
   .containervideo{
-    width: 350px;
-    height: 250px;
-  }
-
-  .headline{
     width: 100%;
-    margin-top: 250px;
-  }
-
-  .headline p{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
   }
 }
+
+
+
