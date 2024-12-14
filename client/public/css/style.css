@@ -74,7 +74,6 @@ button {
     position: fixed;
     top: 0;
     left: -100%;
-    /* Inicialmente fora da tela à esquerda */
     width: 300px;
     /* Largura fixa para o popup */
     height: 100%;
@@ -582,7 +581,7 @@ button {
 }
 
 .containerOferta {
-    padding: 15px 25px;
+    padding: 50px 25px;
     text-align: center;
 }
 
