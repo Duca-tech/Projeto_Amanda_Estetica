@@ -8,6 +8,7 @@
   justify-content: flex-end; /* Ajusta alinhamento horizontal */
   align-items: center;
   position: relative;
+  padding: 25px 25px;
 }
 
 #inicial::after {
@@ -138,7 +139,7 @@ p {
   #inicial{
     background-image: url(../img/BackgroundInicial_mobile.jpg);
     background-size: contain;
-    background-position: center;
+    background-position: top;
     background-color: black;
 
 
@@ -146,7 +147,7 @@ p {
   .textosInicial{
       margin-top: 350px;
       margin: 0;
-
+      
       
       /* padding-top: 50px; */
   }
@@ -158,5 +159,13 @@ p {
   .containervideo{
     width: 350px;
     height: 250px;
+  }
+
+  .headline{
+    width: 100%;
+    margin-top: 250px;
+  }
+
+  .headline p{
   }
 }
