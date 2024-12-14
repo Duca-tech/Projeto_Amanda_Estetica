@@ -62,7 +62,6 @@
   .textos {
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
-    color: black;
     display: flex; /* Transforma o container de texto em um flexbox para alinhamento vertical */
     flex-direction: column; /* Define a direção dos itens como coluna */
     justify-content: center; /* Centraliza os itens na direção principal (vertical) */
@@ -72,3 +71,43 @@
   .textos p{
     color: white;
   }
+
+  @media (max-width: 480px) {
+  
+    .textos h1 {
+        font-size: 28px; /* Título ainda menor para telas muito pequenas */
+    }
+
+    .textos p{
+      font-size: 18px;
+    }
+
+
+    .btn-insc button {
+        font-size: 14px; /* Ajusta o tamanho do botão */
+        padding: 10px 20px; /* Melhora o espaçamento interno */
+        display: flex;
+        justify-content: center;
+    }
+  
+    #curso{ 
+      background-image: url(../img/BackgroundCurso_mobile.jpg);
+      background-size: cover;
+      background-position: center;
+      background-color: black;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+
+    .textos {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center; 
+      margin-right: 25px;
+      padding-bottom:50%;
+
+  }
+  
+}
+  
