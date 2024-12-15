@@ -3,9 +3,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
-
-  padding: 10px 25px;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
 }
@@ -21,6 +18,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left; 
+  box-sizing: border-box;
 }
 
 h1 {
@@ -40,7 +38,6 @@ p {
   justify-content: start;
   width: 600px;
   height: 340px;
-  overflow: hidden;
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); /* Sombra externa com cor neon */
   outline: 2px solid #FF3D89; /* Contorno neon */
   animation: neon-glow 1s alternate infinite; /* Animação de piscar */
@@ -60,18 +57,12 @@ p {
     outline: 2px solid #FF3D89;
   }
 }
-/* Borda animada com brilho */
-
-
-
 .video {
   position: relative;
   z-index: 2; /* Garante que o vídeo fique acima das bordas animadas */
   width: 100%; /* Adapta a largura do vídeo em telas menores */
   height: auto; /* Mantém a proporção do vídeo */
 }
-
-
 .btn-insc {
   display: flex;
   justify-content: start;
@@ -83,22 +74,20 @@ p {
   width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
-  }
+  box-sizing: border-box;
+  padding: 0 20px;
+}
 
 .textosInicial p{
   font-size: 18px;
 }
 
 .textosInicial div{
- 
+
     flex-grow: 1;
   
 }
 
-
-
-
-/* Estilos específicos para telas menores */
 @media (max-width: 768px) {
   .textos {
       width: 90%; /* Ajusta a largura para ocupar quase toda a tela */
@@ -121,14 +110,14 @@ p {
 @media (max-width: 480px) {
   
   h1 {
-      font-size: 24px; /* Título ainda menor para telas muito pequenas */
+      font-size: 24px; 
   }
   p {
-      font-size: 14px; /* Texto menor */
+      font-size: 14px; 
   }
   .btn-insc button {
-      font-size: 14px; /* Ajusta o tamanho do botão */
-      padding: 10px 20px; /* Melhora o espaçamento interno */
+      font-size: 14px; 
+      padding: 10px 20px; 
   }
 
   .headline {
