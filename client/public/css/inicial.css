@@ -92,6 +92,43 @@ p {
   
 }
 
+.header button {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header button i {
+  font-size: 1.8rem;
+  animation: instagramIcon 2s infinite alternate;
+}
+
+@keyframes instagramIcon {
+  0% {
+      transform: rotate(0deg);
+      opacity: 0.8;
+  }
+  100% {
+      transform: rotate(360deg);
+      opacity: 1;
+  }
+}
+
+
 @media (max-width: 768px) {
   .textos {
       width: 90%; /* Ajusta a largura para ocupar quase toda a tela */

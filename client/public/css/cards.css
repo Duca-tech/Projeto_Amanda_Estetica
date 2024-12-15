@@ -73,7 +73,7 @@
 .box::after {
     content: "";
     position: absolute;
-    inset: -3px;
+    inset: -5px;
     z-index: -1; /* Ajustar o z-index */
 }
 
