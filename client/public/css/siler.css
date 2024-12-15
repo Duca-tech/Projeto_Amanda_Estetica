@@ -1,18 +1,30 @@
-    .containerCardSiler{
-        height: 100vh;
-        display: flex; /* Cria um container flexbox */
-        flex-direction: column;
-        justify-content: flex-start; /* Ajusta alinhamento horizontal */
-        position: relative;
-        overflow: hidden;
-    }
+.containerCardSiler {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fff, transparent); /* Degradê de branco para transparente */
+    padding: 50px 0;
+}
+
+.containerCardSiler::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;  /* Defina a altura do degradê */
+    background: linear-gradient(to bottom, transparent, #161624);
+}
 
     /* body{
         background: #eaeaea;
         overflow: hidden;
     } */
 
-    .container{
+    .containerCard{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -21,11 +33,10 @@
         height: 600px;
         background: #f5f5f5;
         box-shadow: 0 30px 50px #dbdbdb;
-        padding: 100px;
 
     }
 
-    .container .slide .item{
+    .containerCard .slide .item{
         width: 200px;
         height: 300px;
         position: absolute;
@@ -155,7 +166,7 @@
         box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5); /* sombra no pseudo-elemento */
         z-index: -1; /* Coloca a sombra atrás do botão */
     }
-    .container button:hover{
+    .containerCard button:hover{
         box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5); /* sombra no pseudo-elemento */
         border: none;
         background-color: #505050;

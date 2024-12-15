@@ -34,20 +34,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-
-    .card {
-        width: 45%;
-        height: 250px;
-    }
-
-    .cards {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 10px;
-    }
-}
-
 .containerNovidades {
     text-align: center;
     box-sizing: border-box;
@@ -95,9 +81,6 @@
     text-align: left;
 }
 
-.bonus div {
-    /* padding: 15px; */
-}
 
 .bonus img {
     width: 250px;
