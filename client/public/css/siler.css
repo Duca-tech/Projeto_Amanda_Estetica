@@ -1,5 +1,5 @@
 .containerCardSiler {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -7,7 +7,6 @@
     overflow: hidden;
     background: linear-gradient(to bottom, #fff, transparent);
     /* Degradê de branco para transparente */
-    padding: 50px 0;
 }
 
 .containerCardSiler::after {
@@ -32,7 +31,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
-    height: 600px;
+    height: 500px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
 
