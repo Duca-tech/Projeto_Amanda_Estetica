@@ -1,0 +1,51 @@
+
+.containerPerguntas {
+    /* padding: 15px 35px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.perguntas {
+    max-width: 500px;
+    width: 100%;
+    /* padding: 20px; */
+}
+
+.perguntas div {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding: 10px; */
+    cursor: pointer;
+}
+
+.resposta {
+    display: none !important;
+    /* Oculta as respostas por padrão */
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze durante a animação */
+    max-height: 0;
+    /* Inicialmente com altura 0 para ocultar */
+    /* padding: 0 10px; */
+    /* Ajusta o espaçamento das respostas */
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #333;
+    transition: max-height 0.5s ease-out, padding 0.3s ease;
+    /* Animação para altura e preenchimento */
+}
+
+.resposta.open {
+    display: block !important;
+    /* Torna visível quando a classe "open" for adicionada */
+    max-height: 500px;
+    /* Define a altura máxima para a animação */
+    /* padding: 10px 10px; */
+    /* Ajusta o preenchimento durante a animação */
+}
