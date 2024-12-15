@@ -3,8 +3,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100vw;
+  display: flex; /* Cria um container flexbox */
+  justify-content: flex-start; /* Ajusta alinhamento horizontal */
+  padding: 10px 25px;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  text-align: center;
 }
 
 
@@ -18,7 +23,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left; 
-  box-sizing: border-box;
 }
 
 h1 {
@@ -79,7 +83,7 @@ p {
 }
 
 .textosInicial p{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .textosInicial div{
