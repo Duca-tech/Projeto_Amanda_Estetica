@@ -1,14 +1,4 @@
-// Exibe o popup
-function abrirPopup() {
-    document.getElementById('popup').style.display = 'flex';
-}
 
-// Fecha o popup
-function fecharPopup() {
-    document.getElementById('popup').style.display = 'none';
-
-    setTimeout(abrirPopup, 10000)
-}
 
 function abrirResposta(pergunta) {
     // Encontra a resposta abaixo da pergunta clicada
