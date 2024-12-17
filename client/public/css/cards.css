@@ -93,17 +93,17 @@
 
 .box:nth-child(1):before,
 .box:nth-child(1):after {
-    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, #FF3D89, #FECDCF, #FB0062);
+    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, white, #FECDCF, #FB0062);
 }
 
 .box:nth-child(2):before,
 .box:nth-child(2):after {
-    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, #FF3D89, #FECDCF, #FB0062);
+    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, white, #FECDCF, #FB0062);
 }
 
 .box:nth-child(3):before,
 .box:nth-child(3):after {
-    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, #FF3D89, #FECDCF, #FB0062);
+    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, white, #FECDCF, #FB0062);
 }
 
 .box::after {
