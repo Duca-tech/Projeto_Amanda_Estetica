@@ -1,4 +1,5 @@
 .containerCardSiler {
+    font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,15 +10,20 @@
     /* Degradê de branco para transparente */
 }
 
-.containerCardSiler::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 25px;
-    /* Defina a altura do degradê */
-    background: linear-gradient(to bottom, transparent, #161624);
+.hl_siler{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.hl_siler h1{
+    font-size: 60px
+    
 }
 
 /* body{
@@ -26,6 +32,7 @@
     } */
 
 .containerCard {
+    margin-top: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -163,7 +170,7 @@
 }
 
 .button button {
-    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+    background: #FF3D89;
     border: none;
     color: white;
     font-size: 1.8rem;
@@ -173,18 +180,18 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button button:hover {
     transform: scale(1.2);
-    background: linear-gradient(45deg, #8f94fb, #4e54c8);
+    background: linear-gradient(45deg, #FECDCF, #FECDCF);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .button button:active {
-    transform: scale(1.1);
+    transform: scale(1.1);  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -215,11 +222,10 @@
     border: none;
     cursor: pointer;
     margin: 0 5px;
-    border: 1px solid #000;
+    border: 1px solid #FF3D89;
     transition: 0.3s;
-    background-color: #000;
+    background-color: #FF3D89;
     position: relative;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
     /* sombra diretamente no botão */
 }
 
@@ -232,7 +238,6 @@
     /* Preencherá a altura do botão */
     top: 0;
     left: 0;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
     /* sombra no pseudo-elemento */
     z-index: -1;
     /* Coloca a sombra atrás do botão */
@@ -242,5 +247,6 @@
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
     /* sombra no pseudo-elemento */
     border: none;
-    background-color: #505050;
+    background-color: #FECDCF;
+    color: #FF3D89;
 }

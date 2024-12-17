@@ -4,10 +4,24 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #161624;
+    background-image: url(../img/BackgroundCards.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     padding: 50px 0;
     z-index: 0;
+}
+
+.hl_cards{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hl_cards h1{
+    font-size: 60px;
 }
 
 .card {
@@ -27,7 +41,7 @@
     width: 90vw;
     max-width: 400px;
     max-height: 570px;
-    background: #060c21;
+    background: white;
     padding: 20px;
     margin: 20px;
 }
@@ -38,7 +52,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 15px;
-    color: #ddd;
+    color: black;
     letter-spacing: 0.2rem;
     padding: 20px;
     text-align: center;
@@ -64,7 +78,7 @@
     left: 0px;
     height: 100%;
     width: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
     display: block;
     pointer-events: none;
 }
@@ -79,17 +93,17 @@
 
 .box:nth-child(1):before,
 .box:nth-child(1):after {
-    background: conic-gradient(from var(--angle), #0c63e7, #060c21, #d11149, #060c21, #0c63e7);
+    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, #FF3D89, #FECDCF, #FB0062);
 }
 
 .box:nth-child(2):before,
 .box:nth-child(2):after {
-    background: conic-gradient(from var(--angle), #f35807, #060c21, #36d709, #060c21, #f35807);
+    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, #FF3D89, #FECDCF, #FB0062);
 }
 
 .box:nth-child(3):before,
 .box:nth-child(3):after {
-    background: conic-gradient(from var(--angle), #dfff00, #060c21, #9600ff, #060c21, #dfff00);
+    background: conic-gradient(from var(--angle), #FB0062, #FECDCF, #FF3D89, #FECDCF, #FB0062);
 }
 
 .box::after {
