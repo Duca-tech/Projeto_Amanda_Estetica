@@ -7,6 +7,7 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(to bottom, #fff, transparent);
+    
     /* Degradê de branco para transparente */
 }
 
