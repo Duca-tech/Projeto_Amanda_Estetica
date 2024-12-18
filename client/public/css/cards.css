@@ -41,7 +41,10 @@
     width: 90vw;
     max-width: 400px;
     max-height: 570px;
-    background: white;
+    background-image: url(../img/CardBG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
     margin: 20px;
 }
@@ -78,7 +81,7 @@
     left: 0px;
     height: 100%;
     width: 50%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba(25, 18, 18, 0.2), rgba(0, 0, 0, 0));
     display: block;
     pointer-events: none;
 }
