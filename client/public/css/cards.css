@@ -203,23 +203,29 @@
 }
 
 @media (max-width: 480px) {
+
+    .container{
+        margin-top: 10px;
+    }
+
+    .containerCards {
+      gap: 1rem;
+      background-image: url(../img/BackgroundCards_mobile.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
     .box {
-        width: 70vw;
-        height: 35vh;
-        padding: 10px;
+      flex: 1 1 100%; 
+      height: auto; 
     }
-
-    .content {
-        gap: 5px;
-        padding: 10px;
+  
+    .box img {
+      height: 150px; 
     }
-
-    .content h1 {
-        font-size: 1.3rem;
+  
+    .box .content {
+      font-size: 0.8rem; 
     }
-
-    .content p,
-    .content h3 {
-        font-size: 1rem;
-    }
-}
+  }
