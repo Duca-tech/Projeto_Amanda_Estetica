@@ -1,6 +1,6 @@
 .containerCardSiler {
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -32,9 +32,8 @@
     } */
 
 .containerCard {
-    margin-top: 50px;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;

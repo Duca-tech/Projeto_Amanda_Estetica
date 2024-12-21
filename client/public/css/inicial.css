@@ -40,7 +40,7 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: start;
-  width: 600px;
+  width: 550px;
   height: 340px;
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); /* Sombra externa com cor neon */
   outline: 2px solid #FF3D89; /* Contorno neon */
