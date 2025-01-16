@@ -1,1 +1,199 @@
-#inicial{background-image:url(../img/Background_Inicial.jpg);background-repeat:no-repeat;background-size:cover;background-position:center;width:100vw;display:flex;justify-content:flex-start;padding:10px 25px;font-family:Arial,Helvetica,sans-serif;position:relative;text-align:center}.socialmedia{margin-top:15px;display:flex;flex-direction:row}.socialmedia a{margin:0 2px}.headline{font-family:Arial,Helvetica,sans-serif;width:50%;color:#fff;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;text-align:left}h1{font-size:35px;color:#FF3D89;margin-bottom:20px}p{margin-bottom:5px}.containervideo{margin-top:30px;position:relative;display:flex;align-items:flex-start;justify-content:start;width:550px;height:340px;box-shadow:0 0 20px rgba(255,0,255,0.5);outline:2px solid #FF3D89;animation:neon-glow 1s alternate infinite}@keyframes neon-glow{0%{box-shadow:0 0 20px rgba(255,0,255,0.5);outline:2px solid #FF3D89}50%{box-shadow:0 0 40px rgba(255,0,255,1);outline:4px solid #FF3D89}100%{box-shadow:0 0 20px rgba(255,0,255,0.5);outline:2px solid #FF3D89}}.video{position:relative;z-index:2;width:100%;height:auto}.btn-insc{display:flex;justify-content:start;margin-top:20px}.textosInicial{display:flex;width:100%;justify-content:flex-start;align-items:flex-start;box-sizing:border-box;padding:0 20px}.textosInicial p{font-size:16px}.textosInicial div{flex-grow:1}@media (max-width: 768px){.textos{width:90%;padding:5%}h1{font-size:28px;text-align:center}p{font-size:16px;text-align:center}.video{width:100%;max-width:100%}}@media (max-width: 480px){.socialmedia{justify-content:center;align-items:center;gap:10px;margin:0 auto;margin-top:10px}h1{font-size:24px}p{font-size:14px}.btn-insc button{font-size:14px;padding:10px 20px;justify-content:center}.headline{margin-top:250px;font-family:Arial,Helvetica,sans-serif;width:100%;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:center}.btn-insc{display:flex;justify-content:center}#inicial{background-image:url(../img/BackgroundInicial_mobile.jpg);background-size:contain;background-position:top;background-color:#000}.textosInicial{text-align:center;justify-content:center;align-items:center;margin:0}.textosInicial p{font-size:13px}.textosInicial div p{color:#fff}.textosInicial .containervideo{margin-top:20px;width:100%;height:100%;justify-content:center;align-items:center}}
+#inicial {
+    background-image: url(../img/Background_Inicial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    text-align: center
+}
+
+.socialmedia {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row
+}
+
+.socialmedia a {
+    margin: 0 2px
+}
+
+.headline {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left
+}
+
+h1 {
+    font-size: 35px;
+    color: #FF3D89;
+    margin-bottom: 20px
+}
+
+p {
+    margin-bottom: 5px
+}
+
+.containervideo {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    width: 550px;
+    height: 340px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    outline: 2px solid #FF3D89;
+    animation: neon-glow 1s alternate infinite
+}
+
+@keyframes neon-glow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+        outline: 2px solid #FF3D89
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(255, 0, 255, 1);
+        outline: 4px solid #FF3D89
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+        outline: 2px solid #FF3D89
+    }
+}
+
+.video {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto
+}
+
+.btn-insc {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px
+}
+
+.textosInicial {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px
+}
+
+.textosInicial p {
+    font-size: 16px
+}
+
+.textosInicial div {
+    flex-grow: 1
+}
+
+@media (max-width: 768px) {
+    .textos {
+        width: 90%;
+        padding: 5%
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center
+    }
+
+    .video {
+        width: 100%;
+        max-width: 100%
+    }
+}
+
+@media (max-width: 480px) {
+    .socialmedia {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto;
+        margin-top: 10px
+    }
+
+    h1 {
+        font-size: 24px
+    }
+
+    p {
+        font-size: 14px
+    }
+
+    .btn-insc button {
+        font-size: 14px;
+        padding: 10px 20px;
+        justify-content: center;
+        margin-left: 50px;
+        
+    }
+
+    .headline {
+        margin-top: 250px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center
+    }
+
+    .btn-insc {
+        display: flex;
+        justify-content: center
+    }
+
+    #inicial {
+        background-image: url(../img/BackgroundInicial_mobile.jpg);
+        background-size: contain;
+        background-position: top;
+        background-color: #000
+    }
+
+    .textosInicial {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0
+    }
+
+    .textosInicial p {
+        font-size: 13px
+    }
+
+    .textosInicial div p {
+        color: #fff
+    }
+
+    .textosInicial .containervideo {
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center
+    }
+}
