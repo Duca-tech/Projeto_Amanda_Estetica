@@ -34,7 +34,7 @@
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 50px;
     color: #FF3D89;
     margin-bottom: 20px
 }
@@ -44,7 +44,7 @@ p {
 }
 
 .containervideo {
-    margin-top: 30px;
+    margin-top: 10px;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -83,7 +83,7 @@ p {
 .btn-insc {
     display: flex;
     justify-content: start;
-    margin-top: 20px
+    margin-top: 10px
 }
 
 .textosInicial {
@@ -135,11 +135,11 @@ p {
     }
 
     h1 {
-        font-size: 24px
+        font-size: 40px
     }
 
     p {
-        font-size: 14px
+        font-size: 20px
     }
 
     .btn-insc button {
@@ -182,7 +182,7 @@ p {
     }
 
     .textosInicial p {
-        font-size: 13px
+        font-size: 20px
     }
 
     .textosInicial div p {
