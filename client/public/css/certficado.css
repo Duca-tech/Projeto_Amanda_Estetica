@@ -1,0 +1,123 @@
+    .containerCertificado {
+        background-image: url(../img/Certificado_Background1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza horizontalmente */
+        justify-content: center; /* Alinha ao topo verticalmente */
+        font-family: 'Poppins', sans-serif;
+        margin-top: 60px;
+        
+    }
+
+    .headlineCertificado {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .headlineCertificado h1 {
+        margin: 60px; 
+        font-size: 30px !important;
+    }
+
+    .footerCertificado h1 {
+        margin: 60px;
+        margin-top: 20px; 
+        font-size: 30px !important;
+    }
+
+    .textosCertificado {
+        display: flex;
+        width: 50%; /* Ocupa 50% da largura do contêiner pai */
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end; /* Alinha à direita do contêiner pai */
+        flex-direction: column; /* Garante que os parágrafos fiquem em coluna */
+        padding-right: 80px; /* Adiciona um pequeno espaço à direita para melhor visualização */
+        margin-right: 80px;
+    }
+
+    .textosCertificado p:first-child {
+        margin-bottom: 40px; /* Espaçamento aumentado */
+    }
+
+    .textosCertificado p {
+        margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+    }
+
+    .footerCertificado {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center; /* Centraliza horizontalmente */
+        margin-top: 100px;
+    }
+
+    @media (max-width: 480px) {
+        .containerCertificado {
+            background-image: url(../img/Certificado_Background_Mobile.jpg);
+            background-size: contain;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            height: auto; /* Ajuste o height para auto */
+        }
+
+        .headlineCertificado h1 {
+            margin: 0px;
+            margin-bottom: 20px;
+            font-size: 25px !important;
+        }
+    
+        .footerCertificado h1 {
+            margin: 5px;
+            font-size: 25px !important;
+            margin-top: 0px; /* Ajuste o valor aqui */
+
+
+        }
+
+        .footerCertificado {
+            margin: 0px;
+            margin-top: 20px;
+        }
+    
+        .textosCertificado {
+            width: 100%;
+            align-self: center;
+            flex-direction: column;
+            text-align: center; /* Centraliza o texto */
+            padding-right: 0px; /* Ajuste o padding para mobile */ 
+            margin-right: 0px;
+            margin-bottom: 0px;
+
+        }
+
+        
+    
+        .textosCertificado p {
+            font-size: 17px !important;
+            width: 100%;
+            margin: 10px auto; /* Centraliza os parágrafos */
+            text-align: center; /* Centraliza o texto */
+            padding: 20px; /* Ajuste o valor conforme preferir */
+            margin-bottom: 0; /* Remova a margem inferior */
+
+        }
+
+        .textosCertificado p:first-child {
+            margin-bottom: 300px; /* Espaçamento aumentado */
+
+            
+        }
+
+
+        
+    }
