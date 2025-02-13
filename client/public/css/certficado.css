@@ -10,21 +10,25 @@
         align-items: center; /* Centraliza horizontalmente */
         justify-content: center; /* Alinha ao topo verticalmente */
         font-family: 'Poppins', sans-serif;
-        margin-top: 60px;
+        position: relative;
+        /* margin-top: 60px; */
         
     }
 
     .headlineCertificado {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;                                                                         
         text-align: center;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 20px;
+
     
     }
 
     .headlineCertificado h1 {
-        margin: 60px; 
+        /* margin: 60px;  */
         font-size: 30px !important;
     }
 
@@ -59,6 +63,8 @@
         text-align: center;
         align-items: center; /* Centraliza horizontalmente */
         margin-top: 100px;
+        position: absolute;
+        bottom: 35px;
     }
 
     @media (max-width: 480px) {
@@ -68,6 +74,7 @@
             margin-top: 50px;
             margin-bottom: 50px;
             height: auto; /* Ajuste o height para auto */
+            padding: 150px 15px;
         }
 
         .headlineCertificado h1 {
