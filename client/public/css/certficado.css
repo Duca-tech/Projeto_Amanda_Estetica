@@ -28,7 +28,6 @@
     }
 
     .headlineCertificado h1 {
-        /* margin: 60px;  */
         font-size: 30px !important;
     }
 
@@ -78,9 +77,19 @@
         }
 
         .headlineCertificado h1 {
-            margin: 0px;
+            margin: 0;
             margin-bottom: 20px;
             font-size: 25px !important;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .headlineCertificado{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
         }
     
         .footerCertificado h1 {
