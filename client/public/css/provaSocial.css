@@ -1,0 +1,195 @@
+.containerProvaSocial {
+    display: flex;
+    flex-direction: column;
+    padding: 75px;
+    align-items: center;
+    background-color: #f5f5f5; 
+}
+
+.provaSocial {
+    width: 800px;
+    display: flex;
+    gap: 15px;
+    position: relative;
+    height: auto;
+    transition: transform 0.5s ease;
+    overflow: hidden; /* Garante que apenas um item será visível */
+}
+
+.provaSocial .provaSocialCarrossel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    margin: 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+    opacity: 0; /* Começa invisível */
+    position: absolute; /* Posiciona todas as divs sobrepostas */
+    top: 0;
+    left: 0;
+}
+
+.provaSocial .provaSocialCarrossel.active {
+    opacity: 1; /* Mostra o item ativo com animação */
+    transition: opacity 0.5s ease; /* Anima a opacidade */
+    position: relative; /* Restaura o comportamento de layout normal para o item ativo */
+}
+
+/* Efeito de movimento */
+.provaSocial .provaSocialCarrossel.slideInLeft {
+    animation: slideInLeft 0.5s forwards; /* Animação de entrada à esquerda */
+}
+
+.provaSocial .provaSocialCarrossel.slideInRight {
+    animation: slideInRight 0.5s forwards; /* Animação de entrada à direita */
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%); /* Começa à direita */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%); /* Começa à esquerda */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.provaSocial .provaSocialCarrossel .provaSocialImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    padding: 50px;
+    width: 100%;
+}
+.provaSocialCarrossel{
+    width: 500px;
+}
+
+.provaSocial .provaSocialCarrossel .provaSocialImg img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantém a imagem dentro da div sem cortar */
+}
+
+.provaSocial div .provaSocialDescricao{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+
+.provaSocial div .provaSocialDescricao h4{
+    font-size: 1.2em;
+}
+
+.provaSocial div .provaSocialDescricao p{
+    padding: 25px;
+    border: 1px dashed #ccc;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.provaSocialTitulo h4{
+    color: #FF3D89;
+    font-size: 1.8em;
+}
+
+.provaSocial .provaSocialImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;  /* Defina uma altura fixa */
+    width: 100%;    /* Define a largura para 100% da largura do item do carrossel */
+}
+
+.provaSocial .provaSocialCarrossel.active:hover{
+    transform: scale(1.1); /* Reduzi o zoom para evitar quebra em telas menores */
+    opacity: 0.9; /* Leve transparência */
+}    
+
+.containerbutton{
+    display: flex;
+    gap: 15px;
+}
+
+.containerProvaSocial button{
+    background: #FF3D89;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem; /* Reduzi o tamanho do botão em telas menores */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.containerProvaSocial button:hover{
+    transform: scale(1.2);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .provaSocial {
+        width: 90%;
+    }
+    .provaSocialCarrossel {
+        width: 90%;
+    }
+    .provaSocial .provaSocialCarrossel .provaSocialImg {
+        height: 400px;
+        padding: 20px;
+    }
+    .provaSocial div .provaSocialDescricao p {
+        font-size: 1em;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .provaSocialTitulo h4 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .provaSocial {
+        width: 100%;
+        flex-direction: column;
+    }
+    .provaSocial .provaSocialCarrossel {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .provaSocial .provaSocialCarrossel .provaSocialImg {
+        height: 300px;
+        padding: 10px;
+    }
+    .provaSocial div .provaSocialDescricao p {
+        font-size: 0.9em;
+    }
+    .containerProvaSocial button {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}

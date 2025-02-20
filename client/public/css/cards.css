@@ -9,6 +9,7 @@
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    flex-direction: column;
     padding: 50px 0;
     z-index: 0
 }
@@ -125,6 +126,13 @@
     animation: glowing-border 3.5s linear infinite, blur-effect 3.5s linear infinite
 }
 
+.containerCardButton button{
+    border-radius: 8px;
+    padding: 10px;
+    background: linear-gradient();
+
+}
+
 @keyframes glowing-border {
     from {
         --angle: 53deg
@@ -201,6 +209,7 @@
     .containerCards {
         gap: 1rem;
         background-image: url(../img/BackgroundCards_mobile.jpg);
+
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover
